@@ -3,14 +3,12 @@ function toggleAside() {
   let asideBtn = document.getElementById("toggle-aside");
 
   if (aside.className === "") {
-    console.log("closing..");
     aside.style.animation = "slideOut-left .6s ease forwards";
     setTimeout(() => {
       aside.className = "close";
     }, 600);
     asideBtn.style.transform = "rotateY(0deg)";
   } else {
-    console.log("opening..");
     aside.className = "";
     aside.style.animation = "slideIn-right .7s ease forwards";
     asideBtn.style.transform = "rotateY(180deg)";
