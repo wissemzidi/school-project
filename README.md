@@ -24,7 +24,8 @@ This project is an input validation with a styling.
 
 - HTML 5
 - CSS 3
-- Java Script
+- vanilla Java Script
+- Python 3.0
 
 [Back To The Top](#read-me)
 
@@ -80,7 +81,7 @@ SOFTWARE.
 
 ## Author Info
 
-### Created By 3 Info <img src="/3 Info.png" alt="" height="25">
+### Created By 3 Info <img src="/3 Info.png" alt="" height="40">
 
 - [Website <img src="https://github.com/Wissem-Zidi/icons/blob/main/home.svg" alt="" height="15">](https://wissem-zidi-ofc.netlify.com)
 - [Email <img src="https://github.com/Wissem-Zidi/icons/blob/main/Email.svg" alt="" height="15">](https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=wissem.zidi.contact@gmail.com)
