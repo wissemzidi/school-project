@@ -1,15 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+  html {
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  #spinner-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    z-index: 9;
+    transition: .75s ease opacity;
+  }
+</style>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free python/html/css/js course and exercices with correction">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="free courses python html css javascript front-end web-dev">
+  <link rel="stylesheet" href="/css/primary.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <title>Home</title>
 </head>
 
-<body>
+<body onload="hideLoader()">
+  <div id="spinner-container">
+    <div class="spinner" id="spinner" style="scale: 1.5;"></div>
+  </div>
 
+  <!-- return to top link -->
+  <a href="#top" id="top" aria-hidden="true"></a>
+  <!-- side bar button -->
+  <button class="toggle-aside" id="toggle-aside" onclick="toggleAside()">
+    <img src="/svg/right arrow.svg" height="30" alt="Menu">
+  </button>
+
+
+  <!-- side bar -->
+  <aside id="aside" class="close">
+    <div class="head">
+      <h2>Menu</h2>
+      <!-- <button class="close-aside">
+        <img src="/svg/close.svg" height="40" alt="Exit">
+      </button> -->
+    </div>
+    <div class="body">
+      <ul class="aside-list">
+        <div>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">HTML</a></li>
+        </div>
+        <div>
+          <li><a href="#">Css</a></li>
+          <li><a href="#">Javascript</a></li>
+        </div>
+        <div>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Exercices</a></li>
+        </div>
+        <div>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">More</a></li>
+        </div>
+      </ul>
+    </div>
+    <div class="foot">
+      <span>copyright 2023</span>
+    </div>
+  </aside>
+
+
+  <!--* header -->
+  <div class="hero-bg">
+  </div>
+
+  <header>
+    <h1 class="header-title">3ème Info</h1>
+  </header>
+
+
+
+  <!--* main -->
+  <main>
+    <section id="hero">
+      <div class="hero-left">
+        <h3 class="hero-title">Welcome to our Class</h3>
+        <p class="hero-p">Let's learn some <span>Python/Front-end</span> and do some exercices</p>
+        <div class="hero-btns">
+          <a href="#">Python</a>
+          <a href="#" class="green">Font-end</a>
+        </div>
+        <span class="hero-span">Choose your interest</span>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-container">
+          <img src="/img/robot1.png" class="hero-img" width="100%" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!--* footer -->
+  <footer id="footer">
+    <div class="footer-left">
+      <ul class="footer-list">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Source Code</a></li>
+        <li><a href="#">More</a></li>
+        <li><a href="#">Info</a></li>
+      </ul>
+    </div>
+    <div class="footer-middle">
+      <ul class="footer-list">
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">Html</a></li>
+        <li><a href="#">Css</a></li>
+        <li><a href="#">Javascript</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <div class="go-top">
+        <a href="#top">
+          <img src="/svg/top.svg" height="30" alt="Top">
+        </a>
+      </div>
+      <div class="footer-contact">
+        <form method="GET">
+          <textarea name="msg" id="footer-textarea" rows="1" placeholder="write us a message"
+            style="resize: none;"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/js/home.js"></script>
+  <noscript style="color: red;">Please reactivate the scripts because it will affect some parts of the
+    website</noscript>
 </body>
 
 </html>
