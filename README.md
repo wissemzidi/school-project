@@ -1,6 +1,6 @@
 # Read Me
 
-## [👀 Live-Server](https://.netlify.app)
+## [👀 Live-Server](https://3info-tn.netlify.app)
 
 <img src="./preview.png" alt="">
 
