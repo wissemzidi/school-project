@@ -290,4 +290,12 @@ footer */
     display: grid;
     gap: 1rem;
   }
+
+  .aside-list li {
+    padding-inline: 10px;
+  }
+
+  .aside-list a {
+    padding-inline: 20px;
+  }
 }

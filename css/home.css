@@ -101,6 +101,8 @@ header h1 {
   max-width: 30rem;
   position: fixed;
   inset: 0;
+  /* max-height: 100vh; */
+  overflow: auto;
   background-color: #27272a;
   z-index: 2;
   color: rgba(238, 238, 238, 0.9);
@@ -173,6 +175,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 4rem;
 }
 
 .hero-left {
@@ -306,6 +309,20 @@ main {
     min-height: 50vh;
   }
 }
+/* 
+
+
+
+
+
+
+
+
+
+*page 1*/
+#page1 {
+  padding-block: 2rem;
+}
 
 /* 
 
@@ -418,5 +435,13 @@ footer */
   .footer-right {
     display: grid;
     gap: 1rem;
+  }
+
+  .aside-list li {
+    padding-inline: 10px;
+  }
+
+  .aside-list a {
+    padding-inline: 20px;
   }
 }
