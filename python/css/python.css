@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 
 html {
@@ -55,6 +56,49 @@ header h1 {
   background-clip: text;
 }
 
+.choose-type-container button,
+#reset-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.2rem 0.6rem;
+  color: white;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#exercice-btn[checked] {
+  border-color: transparent;
+  background-color: red;
+}
+#cour-btn[checked] {
+  border-color: transparent;
+  background-color: green;
+}
+#devoir-btn[checked] {
+  border-color: transparent;
+  background-color: blueviolet;
+}
+
+#exercice-btn:hover {
+  background-color: red;
+  padding: 0.2rem 0.8rem;
+}
+#cour-btn:hover {
+  background-color: green;
+  padding: 0.2rem 0.8rem;
+}
+#devoir-btn:hover {
+  background-color: blueviolet;
+  padding: 0.2rem 0.8rem;
+}
+
+#reset-btn {
+  margin-top: 0.5rem;
+  background-color: rgb(197, 105, 0);
+  border-color: rgb(197, 105, 0);
+}
+
 .toggle-aside {
   padding-top: 3px;
   padding-left: 3px;
@@ -63,7 +107,8 @@ header h1 {
   left: 7px;
   position: fixed;
   border: 1px solid rgba(255, 255, 255, 0.781);
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
   cursor: pointer;
   z-index: 3;
   transition: padding-left 0.2s ease-in-out, background-color 0.2s ease,
@@ -72,7 +117,7 @@ header h1 {
 
 .toggle-aside:hover {
   padding-left: 7.5px;
-  background-color: rgb(28, 105, 63);
+  background-color: rgba(28, 105, 63);
 }
 
 .toggle-aside img {
@@ -169,8 +214,11 @@ main {
 }
 
 #hero {
+  margin-inline: auto;
+  max-width: 85rem;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   padding-block: 2rem;
   gap: 2rem;
   justify-content: space-around;
@@ -214,6 +262,8 @@ main {
 }
 
 .card-right {
+  display: grid;
+  align-content: center;
   margin-left: auto;
   padding-block: 16px;
   width: 50%;
@@ -221,9 +271,13 @@ main {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.068);
   aspect-ratio: 16/9;
-  background-image: url("../img/cour 1.png");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+.card-right img {
+  margin-inline: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 500px) {
