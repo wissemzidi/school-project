@@ -163,16 +163,20 @@ header h1 {
 *main */
 main {
   padding: 1rem;
-  padding-top: 2rem;
+  padding-inline: 0.5rem;
   color: #eee;
   min-height: 100vh;
 }
 
 #hero {
-  padding-block: 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-items: center;
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+#hero img {
+  max-width: 60rem;
 }
 /* 
 
@@ -285,5 +289,13 @@ footer */
   .footer-right {
     display: grid;
     gap: 1rem;
+  }
+
+  .aside-list li {
+    padding-inline: 10px;
+  }
+
+  .aside-list a {
+    padding-inline: 20px;
   }
 }

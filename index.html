@@ -4,14 +4,13 @@
 <style>
   html {
     background-color: #000;
-    overflow: hidden;
   }
 
   #spinner-container {
     display: grid;
     justify-items: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     inset: 0;
     background-color: #000;
     z-index: 9;
@@ -33,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <title>Home</title>
+  <title>3 Info</title>
 </head>
 
 <body onload="hideLoader()">
@@ -54,6 +53,10 @@
     <div class="body">
       <ul class="aside-list">
         <div>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#top" onclick="toggleAside()">Top</a></li>
+        </div>
+        <div>
           <li><a href="./python/python.html">Python</a></li>
           <li><a href="#">HTML</a></li>
         </div>
@@ -62,11 +65,7 @@
           <li><a href="#">Javascript</a></li>
         </div>
         <div>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#top">Top</a></li>
-        </div>
-        <div>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="#footer" onclick="toggleAside()">Contact</a></li>
           <li><a href="./about.html">About-us</a></li>
         </div>
       </ul>
@@ -110,6 +109,88 @@
         </div>
       </div>
     </section>
+
+
+    <!-- page 1 -> definitions -->
+    <section id="page1">
+      <article id="p1-article1">
+        <div class="p1-head">
+          <h2>What is Python ?</h2>
+        </div>
+        <div class="p1-body">
+          <p>Python is a high-level, interpreted programming language that is widely used for web development, data
+            analysis, artificial intelligence, and scientific computing. It is known for its simple syntax, which makes
+            it easy to learn and use, and for its large and active developer community, which has created a wide range
+            of libraries and frameworks that can be easily integrated into Python projects. Python is a general-purpose
+            language, which means that it can be used to build almost any type of software, from simple scripts to
+            complex applications. It is also highly portable, meaning that code written in Python can run on almost any
+            device, operating system, or platform.</p>
+        </div>
+      </article>
+      <article id="p1-article2">
+        <div class="p1-head">
+          <h2>What is HTML ?</h2>
+        </div>
+        <div class="p1-body">
+          <p>HTML (HyperText Markup Language) is a markup language used to structure and format content on the web. It
+            is the standard markup language for creating web pages and web applications. HTML is used to create the
+            structure and content of a web page, while CSS is used to control the styling and layout of the page, and
+            JavaScript is used to add interactivity and dynamic behavior to the page. Together, these technologies form
+            the basis of modern web development.</p>
+        </div>
+      </article>
+      <article id="p1-article3">
+        <div class="p1-head">
+          <h2>What is CSS ?</h2>
+        </div>
+        <div class="p1-body">
+          <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the appearance and layout of HTML
+            documents. It is used to style web pages and web applications, and is an essential part of modern web
+            development.
+            CSS allows you to specify the colors, fonts, sizes, and positions of elements in an HTML document. It
+            enables you to create consistent, professional-looking designs that can be easily maintained and modified.
+          </p>
+        </div>
+      </article>
+      <article id="p1-article4">
+        <div class="p1-head">
+          <h2>What is JavaScript ?</h2>
+        </div>
+        <div class="p1-body">
+          <p>JavaScript is a programming language that is commonly used to add interactivity and dynamic behavior to web
+            pages. It is a client-side language, which means that it is executed by the user's web browser, rather than
+            by a server.
+            JavaScript is also used in other contexts, such as mobile app development, desktop application development,
+            and server-side programming (using technologies like Node.js). It is a popular and widely-used language that
+            is supported by most modern web browsers.
+          </p>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- page 2 -> suggestions -->
+    <section id="page2">
+      <div class="page2-head">
+        <h2>Most Popular</h2>
+      </div>
+      <br>
+      <br>
+      <div class="page2-body">
+        <a href="./python/cour/DC1/Dvr-control-1.html" class="card">
+          <h4 class="card-title">Devoir de control n°1 :</h4>
+        </a>
+        <a href="./python/cour/DC2/Dvr-control-2.html" class="card">
+          <h4 class="card-title">Devoir de control n°2 :</h4>
+        </a>
+        <a href="./python/cour/2022.12.02/Cour-matrice.html" class="card">
+          <h4 class="card-title">Cour Matrice :</h4>
+        </a>
+        <a href="./python/cour/2022.11.25/Ex-compte-bancaire.html" class="card">
+          <h4 class="card-title">Exercice Compte Bancaire :</h4>
+        </a>
+      </div>
+    </section>
   </main>
 
 
@@ -122,7 +203,7 @@
         <li><a href="#footer">Contact</a></li>
         <li><a href="https://github.com/Wissem-Zidi/school-project">Source Code</a></li>
         <li><a href="https://github.com/Wissem-Zidi">Author</a></li>
-        <li><a href="#">About-us</a></li>
+        <li><a href="./about.html">About-us</a></li>
       </ul>
     </div>
     <div class="footer-middle">
