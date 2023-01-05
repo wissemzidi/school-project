@@ -4,13 +4,14 @@
 <style>
   html {
     background-color: #000;
+    overflow: hidden;
   }
 
   #spinner-container {
     display: grid;
     justify-items: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-color: #000;
     z-index: 9;
@@ -53,10 +54,6 @@
     <div class="body">
       <ul class="aside-list">
         <div>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#top" onclick="toggleAside()">Top</a></li>
-        </div>
-        <div>
           <li><a href="./python.html">Python</a></li>
           <li><a href="#">HTML</a></li>
         </div>
@@ -65,7 +62,11 @@
           <li><a href="#">Javascript</a></li>
         </div>
         <div>
-          <li><a href="#footer" onclick="toggleAside()">Contact</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#top">Top</a></li>
+        </div>
+        <div>
+          <li><a href="#footer">Contact</a></li>
           <li><a href="../about.html">About-us</a></li>
         </div>
       </ul>
@@ -87,21 +88,6 @@
 
   <header>
     <h1 class="header-title">Python</h1>
-    <br>
-    <div class="choose-type-container">
-      <button id="exercice-btn" data-value="ex" class="type-btn">
-        Exercice
-      </button>
-      <button id="cour-btn" data-value="cour" class="type-btn">
-        Cour
-      </button>
-      <button id="devoir-btn" data-value="dvr" class="type-btn">
-        Devoir
-      </button>
-    </div>
-    <button id="reset-btn" onclick="resetType()" class="type-btn">
-      Reset
-    </button>
   </header>
 
 
@@ -110,478 +96,54 @@
   <main>
     <section id="hero">
       <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.09.23/Ex-anne-bissextile.html" class="card-link">
+      <article class="card">
+        <a href="./html/cour 1.html" class="card-link">
           <div class="card-left">
             <div>
               <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
                 Ex
               </span>
-              <span>2022/09/23</span>
+              <span>26/06/2022</span>
             </div>
             <h4>
-              Année bissextile
+              Exercice dichotomique
             </h4>
           </div>
-          <div class="card-right">
-            <img src="./cour/2022.09.23/anne_bissextile.png" height="100%" alt="">
-          </div>
+          <div class="card-right"></div>
         </a>
       </article>
       <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.09.23/Ex-reverse-nom-prenom.html" class="card-link">
+      <article class="card">
+        <a href="./html/cour 2.html" class="card-link">
           <div class="card-left">
             <div>
               <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
                 Ex
               </span>
-              <span>2022/09/23</span>
+              <span>26/06/2022</span>
             </div>
             <h4>
-              Reverse Nom Prénom
+              Exercice dichotomique
             </h4>
           </div>
-          <div class="card-right">
-            <img src="./cour/2022.09.23/reverse_nom_prenom.png" width="100%" height="100%" alt="">
-          </div>
+          <div class="card-right"></div>
         </a>
       </article>
       <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.09.26/Ex-afficher-la-seson.html" class="card-link">
+      <article class="card">
+        <a href="./html/cour 3.html" class="card-link">
           <div class="card-left">
             <div>
               <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
                 Ex
               </span>
-              <span>2022/09/26</span>
+              <span>26/06/2022</span>
             </div>
             <h4>
-              Afficher la season
+              Exercice dichotomique
             </h4>
           </div>
-          <div class="card-right">
-            <img src="./cour/2022.09.26/afficher-la-seson.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.09.26/Ex-jour-suivant.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/09/26</span>
-            </div>
-            <h4>
-              Jour suivant
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.09.26/jour_suivant.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.09.30/Ex-palindrome.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/09/30</span>
-            </div>
-            <h4>
-              Palindrome
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.09.30/palindrome.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.09.30/Ex-parfait.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/09/30</span>
-            </div>
-            <h4>
-              Parfait
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.09.30/parfait.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.03/Ex-croissant.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/03</span>
-            </div>
-            <h4>
-              Croissant
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.03/croissant.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.03/Ex-remplacer.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/03</span>
-            </div>
-            <h4>
-              Remplacer
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.03/remplacer.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.07/Ex-remplacer--v2.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/07</span>
-            </div>
-            <h4>
-              Remplacer --V2
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.07/remplacer v2.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.10/Ex-moyenne-eleve.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/10</span>
-            </div>
-            <h4>
-              Moyenne élève
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.10/exercice-correction.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.17/Ex-moyenne-eleve--v2.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/17</span>
-            </div>
-            <h4>
-              Moyenne élève --V2
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.17/moyenne-eleve-v3.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.17(1)/Ex-moyenne-eleve--v3.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/17</span>
-            </div>
-            <h4>
-              Moyenne élève --V3
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.17(1)/moyenne-eleve-v4.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card cour">
-        <a href="./cour/2022.10.21/Cour-tri.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: green; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Cour
-              </span>
-              <span>2022/10/21</span>
-            </div>
-            <h4>
-              Le tri
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.21/tri.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.10.21/Ex-alpha-connu.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/10/21</span>
-            </div>
-            <h4>
-              Alpha Connu
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.21/alpha-connu.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card cour">
-        <a href="./cour/2022.10.24/Cour-tri-sellection.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: green; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Cour
-              </span>
-              <span>2022/10/24</span>
-            </div>
-            <h4>
-              Tri par Sélection
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.10.24/tri-sellection.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.11.07/Ex-tri-sellection.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/11/07</span>
-            </div>
-            <h4>
-              Tri par sélection
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.07/tri-sellection.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card cour">
-        <a href="./cour/2022.11.11/Cour-tri-bulle.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: green; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Cour
-              </span>
-              <span>2022/11/11</span>
-            </div>
-            <h4>
-              Tri à bulle
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.11/tri-bulle.png" height="100%" width="100%" alt="Preview">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card cour">
-        <a href="./cour/2022.11.14/Cour-recherche-dichotomique.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: green; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Cour
-              </span>
-              <span>2022/11/14</span>
-            </div>
-            <h4>
-              Recherche dichotomique
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.14/recherche-dichotomique.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.11.14(1)/Ex-recherche-dichotomique.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/11/14</span>
-            </div>
-            <h4>
-              Recherche dichotomique
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.14(1)/recherche-dichotomique--v2.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.11.14(1)/Ex-tri-bulle.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/11/14</span>
-            </div>
-            <h4>
-              Tri à bulle & recherche dichotomique
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.14(1)/tri-bulle&recherche-dichotomique.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card cour">
-        <a href="./cour/2022.11.20/Cour-dictionnaire.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: green; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Cour
-              </span>
-              <span>2022/11/20</span>
-            </div>
-            <h4>
-              Dictionnaire
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.20/dictionnaire.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.11.20/Ex-scolariter.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/11/20</span>
-            </div>
-            <h4>
-              Scolarité
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.20/ex-scolariter--v1.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card ex">
-        <a href="./cour/2022.11.25/Ex-compte-bancaire.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span style="background-color: red; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Ex
-              </span>
-              <span>2022/11/25</span>
-            </div>
-            <h4>
-              Compte bancaire
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.25/ex-compte-bancaire.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card dvr">
-        <a href="./cour/DC1/Dvr-control-1.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span
-                style="background-color: blueviolet; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Dvr
-              </span>
-            </div>
-            <h4>
-              Control 1
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/DC1/correction-dvr-control-1.png" height="100%" width="100%" alt="">
-          </div>
-        </a>
-      </article>
-      <!-- card template -->
-      <article class="card dvr">
-        <a href="./cour/DC2/Dvr-control-2.html" class="card-link">
-          <div class="card-left">
-            <div>
-              <span
-                style="background-color: blueviolet; border-radius: 50px; padding: .2rem .3rem; margin-right: 1rem;">
-                Dvr
-              </span>
-            </div>
-            <h4>
-              Control 2
-            </h4>
-          </div>
-          <div class="card-right">
-            <img src="./cour/2022.11.25/ex-compte-bancaire.png" height="100%" width="100%" alt="">
-          </div>
+          <div class="card-right"></div>
         </a>
       </article>
       <!--  -->
@@ -628,7 +190,6 @@
 
 
   <script src="../js/home.js"></script>
-  <script src="./js/python.js"></script>
   <noscript style="color: red;">Please reactivate the scripts because it will affect some parts of the
     website</noscript>
 </body>

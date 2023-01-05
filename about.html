@@ -4,13 +4,14 @@
 <style>
   html {
     background-color: #000;
+    overflow: hidden;
   }
 
   #spinner-container {
     display: grid;
     justify-items: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-color: #000;
     z-index: 9;
@@ -53,10 +54,6 @@
     <div class="body">
       <ul class="aside-list">
         <div>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#top" onclick="toggleAside()">Top</a></li>
-        </div>
-        <div>
           <li><a href="./python/python.html">Python</a></li>
           <li><a href="#">HTML</a></li>
         </div>
@@ -65,7 +62,11 @@
           <li><a href="#">Javascript</a></li>
         </div>
         <div>
-          <li><a href="#footer" onclick="toggleAside()">Contact</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#top">Top</a></li>
+        </div>
+        <div>
+          <li><a href="#footer">Contact</a></li>
           <li><a href="./about.html">About-us</a></li>
         </div>
       </ul>
