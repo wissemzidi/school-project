@@ -29,7 +29,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("/img/bg5.jpg");
+  background-image: url("img/bg5.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
